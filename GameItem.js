@@ -6,7 +6,7 @@ const GameList = ({games}) => (
         {games.map(game => (
             <View key={game.id} style={styles.item}>
                 <Text>{game.name} </Text>
-                <Text> {game.price}</Text>
+                <Text> {game.price}€</Text>
                 <Text>{game.catégorie}</Text>
                 <Image source={{ uri: game.image }} style={styles.image} />
             </View>
