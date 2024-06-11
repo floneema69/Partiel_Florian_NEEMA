@@ -2,8 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React, { useState } from 'react';
 import GameList from "./GameItem";
+import Header from "./Header";
 
 export default function App() {
+
   const [donner,setdonner] = useState([
     {
       name: "Medal of Honor",
@@ -79,6 +81,7 @@ export default function App() {
 
   return (
       <View style={styles.container}>
+        <Header username="cosmo69" totalGames={donner.length} />
         <GameList games={donner} />
       </View>
   );
